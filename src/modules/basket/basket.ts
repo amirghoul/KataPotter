@@ -6,12 +6,11 @@ export class ShoppingCart {
     }
 
     public addBooks(booksToAdd: string[]): void {
-        // TODO
+        this.books.push(...booksToAdd);
     }
 
     public getContents(): string[] {
-        // TODO
-        return ["book1"];
+        return this.books;
     }
 
 }
