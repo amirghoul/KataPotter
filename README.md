@@ -34,6 +34,8 @@ kata-potter/
 │
 ├── package.json                    # Project dependencies and scripts
 ├── tsconfig.json                   # TypeScript configuration
+├── jest.config.ts                  # Jest configuration
+├── .gitignore                      # .gitignore configuration
 └── README.md                       # Project documentation
 ```
 

@@ -1,0 +1,23 @@
+{
+  "name": "katapotter",
+  "version": "1.0.0",
+  "description": "KataPotter is a TypeScript implementation of a pricing model for a series of books about a famous wizard called Potter. The problem involves calculating the total price of a shopping basket.",
+  "scripts": {
+    "start:dev": "ts-node src/index.ts",
+    "test:dev": "jest",
+    "build": "tsc",
+    "start:dist": "node dist/src/index.js",
+    "test:dist": "jest dist/tests"
+  },
+  "keywords": [],
+  "author": "ghoulamir@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.16",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
