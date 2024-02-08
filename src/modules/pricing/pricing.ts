@@ -1,22 +1,34 @@
-import { BOOK_NAMES, BOOK_PRICE_EURO, DISCOUNT } from "../utils";
+import { BOOK_NAMES, BOOK_PRICE_EURO, DISCOUNT } from '../utils';
 
-const decreaseOccurrences = (occurrencesMap: Map<string, number>): Map<string, number> =>
-  new Map(Array.from(occurrencesMap).map(([book, occurrences]) => [book, Math.max(0, occurrences - 1)]));
+const decreaseOccurrences = (
+  occurrencesMap: Map<string, number>,
+): Map<string, number> =>
+  new Map(
+    Array.from(occurrencesMap).map(([book, occurrences]) => [
+      book,
+      Math.max(0, occurrences - 1),
+    ]),
+  );
 
-const getDiscountForSize = (distinctTitles: number): number => DISCOUNT.get(distinctTitles) || 1;
+const getDiscountForSize = (distinctTitles: number): number =>
+  DISCOUNT.get(distinctTitles) || 1;
 
 const countNonZeroValues = (occurrencesMap: Map<string, number>): number =>
-  Array.from(occurrencesMap.values()).reduce((acc, val) => acc + (val > 0 ? 1 : 0), 0);
+  Array.from(occurrencesMap.values()).reduce(
+    (acc, val) => acc + (val > 0 ? 1 : 0),
+    0,
+  );
 
 const countBookOccurrences = (books: string[]): Map<string, number> =>
   new Map(
-    BOOK_NAMES.map((book) => [
+    BOOK_NAMES.map(book => [
       book,
-      books.filter((currentBook) => currentBook === book).length,
-    ])
+      books.filter(currentBook => currentBook === book).length,
+    ]),
   );
 
-const createFilledArray = (size: number, length: number): number[] => Array(length).fill(size);
+const createFilledArray = (size: number, length: number): number[] =>
+  Array(length).fill(size);
 
 const optimizePacks = (packs: number[]): number[] => {
   const packCounts: number[] = new Array(6).fill(0);
@@ -45,6 +57,6 @@ export function calculatePrice(books: string[]): number {
   }
 
   return optimizePacks(packs)
-    .map((size) => size * BOOK_PRICE_EURO * getDiscountForSize(size))
+    .map(size => size * BOOK_PRICE_EURO * getDiscountForSize(size))
     .reduce((acc, val) => acc + val, 0);
 }

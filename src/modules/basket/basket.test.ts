@@ -1,4 +1,4 @@
-import { ShoppingCart } from "../../src/modules/basket";
+import { ShoppingCart } from './basket';
 
 describe('ShoppingCart', () => {
   let cart: ShoppingCart;

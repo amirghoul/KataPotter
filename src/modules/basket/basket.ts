@@ -1,16 +1,15 @@
 export class ShoppingCart {
-    private books: string[];
+  private books: string[];
 
-    constructor() {
-        this.books = [];
-    }
+  constructor() {
+    this.books = [];
+  }
 
-    public addBooks(booksToAdd: string[]): void {
-        this.books.push(...booksToAdd);
-    }
+  public addBooks(booksToAdd: string[]): void {
+    this.books.push(...booksToAdd);
+  }
 
-    public getContents(): string[] {
-        return this.books;
-    }
-
+  public getContents(): string[] {
+    return this.books;
+  }
 }

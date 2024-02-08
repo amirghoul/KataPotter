@@ -1,9 +1,9 @@
 export const BOOK_NAMES: string[] = [
-    "book1",
-    "book2",
-    "book3",
-    "book4",
-    "book5"
+  'book1',
+  'book2',
+  'book3',
+  'book4',
+  'book5',
 ];
 
 export const BOOK_PRICE_EURO: number = 8;

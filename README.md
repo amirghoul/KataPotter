@@ -14,24 +14,18 @@ kata-potter/
 │   ├── modules/
 │   │   ├── basket/
 │   │   │   ├── basket.ts           # Module for managing the shopping basket
+│   │   │   ├── basket.test.ts          # Unit tests for the basket module
 │   │   │   └── index.ts            # Barrel file for basket module
 │   │   ├── pricing/
 │   │   │   ├── pricing.ts          # Module for calculating the price with discounts
+│   │   │   ├── pricing.test.ts         # Unit tests for the pricing module
 │   │   │   └── index.ts            # Barrel file for pricing module
 │   │   └── utils/
 │   │       ├── utils.ts            # Utility functions
 │   │       └── index.ts            # Barrel file for utils module
 │   └── index.ts                    # Exported symbols from modules
 │
-├── tests/
-│   ├── basket/
-│   │   ├── basket.test.ts          # Unit tests for the basket module
-│   │   └── index.test.ts           # Barrel file for basket tests
-│   ├── pricing/
-│   │   ├── pricing.test.ts         # Unit tests for the pricing module
-│   │   └── index.test.ts           # Barrel file for pricing tests
-│   └── index.test.ts               # Exported symbols from test modules
-│
+
 ├── package.json                    # Project dependencies and scripts
 ├── tsconfig.json                   # TypeScript configuration
 ├── jest.config.ts                  # Jest configuration
@@ -81,13 +75,12 @@ Contributions are welcome! Feel free to open issues for feature requests, bug re
 
 Here are the scripts defined in the `package.json` file:
 
-- **start:dev**: This script starts the TypeScript file `src/index.ts` using `ts-node`.
+- **start:dev**: Initiates the TypeScript file `src/index.ts` via `ts-node` for development.
 
-- **test:dev**: This script runs tests using Jest.
+- **test:dev**: Executes Jest tests from the `src/` directory for development.
 
-- **build**: This script compiles TypeScript files using the TypeScript compiler (`tsc`).
+- **build**: Compiles TypeScript files using the TypeScript compiler (`tsc`).
 
-- **start:dist**: This script starts the compiled JavaScript file `dist/src/index.js` using Node.js.
+- **start:dist**: Launches the compiled JavaScript file `dist/src/index.js` via Node.js for distribution.
 
-- **test:dist**: This script runs tests on the compiled JavaScript files located in the `dist/tests` directory using Jest.
-
+- **test:dist**: Executes Jest tests on compiled JavaScript files located in the `dist/tests` directory for distribution.
