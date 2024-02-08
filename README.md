@@ -76,3 +76,18 @@ console.log('Total Price:', totalPrice);
 ## Contributing
 
 Contributions are welcome! Feel free to open issues for feature requests, bug reports, or general discussions.
+
+## Scripts
+
+Here are the scripts defined in the `package.json` file:
+
+- **start:dev**: This script starts the TypeScript file `src/index.ts` using `ts-node`.
+
+- **test:dev**: This script runs tests using Jest.
+
+- **build**: This script compiles TypeScript files using the TypeScript compiler (`tsc`).
+
+- **start:dist**: This script starts the compiled JavaScript file `dist/src/index.js` using Node.js.
+
+- **test:dist**: This script runs tests on the compiled JavaScript files located in the `dist/tests` directory using Jest.
+
